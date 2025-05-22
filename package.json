@@ -1,9 +1,10 @@
 {
-	"name": "bikes",
+	"name": "my-portfolio",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"prebuild": "npx elocuent -d static,src -o static/loc.csv",
 		"build": "vite build",
 		"preview": "vite preview"
 	},
@@ -11,12 +12,14 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.5.0",
-		"svelte": "^4.2.19",
+		"elocuent": "^0.0.4",
+		"svelte": "^4.2.20",
 		"vite": "^4.3.0"
 	},
 	"type": "module",
 	"dependencies": {
+		"@floating-ui/dom": "^1.7.0",
 		"d3": "^7.9.0",
-		"mapbox-gl": "^3.12.0"
+		"svelte-scrolly": "^0.0.4"
 	}
 }
